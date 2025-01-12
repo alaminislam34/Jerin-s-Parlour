@@ -1,10 +1,11 @@
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
 import logo from "../../assets/logo.png";
 import { RiMenu3Fill } from "react-icons/ri";
 import { useState } from "react";
 
 const Navbar = () => {
   const [isOpen, setOpen] = useState(false);
+  const navigate = useNavigate();
   return (
     <div className="bg-[#FFF8F5]">
       <nav className="flex justify-between items-center px-4 max-w-7xl mx-auto py-4">
@@ -27,7 +28,10 @@ const Navbar = () => {
             </li>
           </ul>
           <div className="flex">
-            <button className="py-2 px-4 md:px-6 bg-primary text-white rounded-md">
+            <button
+              onClick={() => navigate("/login")}
+              className="py-2 px-4 md:px-6 bg-primary text-white rounded-md"
+            >
               Login
             </button>
             <div className="relative">

@@ -1,4 +1,5 @@
 import Banner from "../Banner/Banner";
+import ContactForm from "../MessageForm/ContactFrom";
 import Services from "../Services/Services";
 import TelUs from "../TelUs/TelUs";
 import Testimonial from "../Testimonial/Testimonial";
@@ -16,6 +17,8 @@ const Home = () => {
       <TelUs />
       <br />
       <Testimonial />
+      <br />
+      <ContactForm />
     </div>
   );
 };
